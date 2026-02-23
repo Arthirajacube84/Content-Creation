@@ -1,14 +1,14 @@
 import requests
-from langchain_google_genai import ChatGoogleGenerativeAI
-from config import GEMINI_API_KEY, TAVILY_API_KEY, MODEL_NAME, TEMPERATURE, MAX_OUTPUT_TOKENS
+from langchain_openai import ChatOpenAI
+from config import OPENAI_API_KEY, TAVILY_API_KEY, MODEL_NAME, TEMPERATURE, MAX_OUTPUT_TOKENS
 from state import ChatState
 
 # Initialize LLM
-llm = ChatGoogleGenerativeAI(
-    model=MODEL_NAME, # This will use the "gemini-2.5-flash" string from config if set, or you can hardcode "gemini-2.5-flash"
-    google_api_key=GEMINI_API_KEY,
+llm = ChatOpenAI(
+    model=MODEL_NAME,
+    api_key=OPENAI_API_KEY,
     temperature=TEMPERATURE,
-    max_output_tokens=MAX_OUTPUT_TOKENS
+    max_tokens=MAX_OUTPUT_TOKENS
 )
 
 def get_user_input(state: ChatState):
