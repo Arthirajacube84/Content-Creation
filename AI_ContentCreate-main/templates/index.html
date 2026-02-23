@@ -17,10 +17,8 @@
         
         <div class="chat-container">
             <div id="chat-box" class="chat-box">
-                <div class="message ai-message">
-                    <div class="message-content">
-                        Hello! I can help you create content. What would you like to create today?
-                    </div>
+                <div id="welcome-screen" class="welcome-screen">
+                    <h2>Your assistant for Blogs, Emails, and Video Scripts</h2>
                 </div>
             </div>
             
@@ -34,6 +32,7 @@
     <script>
         const chatBox = document.getElementById('chat-box');
         const userInput = document.getElementById('user-input');
+        const welcomeScreen = document.getElementById('welcome-screen');
 
         // Allow Enter key to send
         userInput.addEventListener('keypress', function (e) {
@@ -45,6 +44,11 @@
         async function sendMessage() {
             const message = userInput.value.trim();
             if (!message) return;
+
+            // Hide welcome screen on first message
+            if (welcomeScreen) {
+                welcomeScreen.style.display = 'none';
+            }
 
             // Add User Message to Chat
             addMessage(message, 'user-message');
