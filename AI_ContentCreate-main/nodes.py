@@ -3,7 +3,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from config import GEMINI_API_KEY, TAVILY_API_KEY, MODEL_NAME, TEMPERATURE, MAX_OUTPUT_TOKENS
 from state import ChatState
 
-# Initialize LLM
+# Initialize LLM for Gemini
 llm = ChatGoogleGenerativeAI(
     model=MODEL_NAME,
     google_api_key=GEMINI_API_KEY,
