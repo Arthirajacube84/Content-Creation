@@ -1,5 +1,5 @@
 from langgraph.graph import END
-from .state import ChatState
+from state import ChatState
 
 def should_continue(state: ChatState):
     """Check if conversation should continue"""
