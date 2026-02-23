@@ -53,7 +53,7 @@ def check_content_request(state: ChatState):
        - If type is similar to email (e.g. newsletter), map to EMAIL.
     2. If user wants content but no specific type: "ASK_TYPE: [topic]"
        - "create content for project manager" -> "ASK_TYPE: project manager"
-    3. If user says a greeting (hi, hello, hey, etc.): "GREETING: Hello! I can help you create content. What would you like to create today?"
+    3. If user says a greeting (hi, hello, hey, etc.): "GREETING: Hello! I can help you create blogs, emails, and video scripts. What would you like to create today?"
     4. If user asks to PICK or SELECT from previous results (e.g. "get the best blog", "which is best", "choose one"): "SELECT_BEST: [user_input]"
     5. If not about content creation: "OFF_TOPIC: I apologize, but I can only assist with content creation. How can I help you create content today?"
     
