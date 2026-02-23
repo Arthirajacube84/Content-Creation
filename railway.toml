@@ -1,8 +1,7 @@
 [build]
-dockerfilePath = "AI_ContentCreate-main/Dockerfile"
-buildContextDir = "AI_ContentCreate-main"
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
 
 [deploy]
-startCommand = "gunicorn --bind 0.0.0.0:$PORT web_app:app"
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 3
