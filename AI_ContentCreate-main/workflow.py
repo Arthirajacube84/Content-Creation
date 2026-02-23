@@ -1,6 +1,6 @@
 from langgraph.graph import StateGraph, END
-from state import ChatState
-from nodes import (
+from .state import ChatState
+from .nodes import (
     get_user_input,
     check_content_request,
     ask_content_type,
@@ -8,7 +8,7 @@ from nodes import (
     create_content,
     display_response
 )
-from router import route_response, should_continue
+from .router import route_response, should_continue
 
 # Build LangGraph workflow
 workflow = StateGraph(ChatState)

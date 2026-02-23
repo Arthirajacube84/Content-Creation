@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-from workflow import app as graph_app
+from content_creation.workflow import app as graph_app
 import os
 
 # Define base directory explicitly to avoid path issues
